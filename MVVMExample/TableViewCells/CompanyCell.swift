@@ -11,9 +11,9 @@ import UIKit
 
 class CompanyCell: UITableViewCell {
     
-    var companyVM:CompanyViewModel! {
+    var companyVM:MovieViewModel! {
         didSet {
-            textLabel?.text = self.companyVM.comName
+            textLabel?.text = self.companyVM.movieName
             accessoryType = self.companyVM.accessoryType
         }
     }

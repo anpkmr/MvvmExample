@@ -1,5 +1,5 @@
 //
-//  Dishesh.swift
+//  Constants.swift
 //  MVVMExample
 //
 //  Created by anoop on 9/13/18.
@@ -7,10 +7,3 @@
 //
 
 import Foundation
-
-class Company: NSObject {
-    var name:String = ""
-    init(name:String) {
-        self.name = name
-    }
-}

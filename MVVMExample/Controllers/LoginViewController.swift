@@ -19,6 +19,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         handleLoader(isHidden: true)
+        textFieldUserName.text = "swiftUser"
+        textFieldPassword.text = "swiftPassword"
         // Do any additional setup after loading the view.
     }
 
@@ -29,8 +31,8 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        textFieldPassword.text = nil
-        textFieldUserName.text = nil
+//        textFieldPassword.text = nil
+//        textFieldUserName.text = nil
     }
     @IBAction func buttonLoginTapped(_ sender:UIButton){
         signInUser()

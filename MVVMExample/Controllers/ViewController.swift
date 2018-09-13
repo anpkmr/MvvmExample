@@ -10,15 +10,21 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource {
     @IBOutlet weak var todoTableView:UITableView!
-    @IBOutlet weak var textFieldItem:UITextField!
     
-    var companyNameArry = [CompanyViewModel]()
+    var movieFetchViewModel = MovieDataFetchViewModel()
+    
+    var companyNameArry = [MovieViewModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //creating an array of CompnayViewModel
-       companyNameArry = [CompanyViewModel(company:Company(name:"Apple")),CompanyViewModel(company:Company(name:"Microsoft")),CompanyViewModel(company:Company(name:"Google")),CompanyViewModel(company:Company(name:"Amazon")),CompanyViewModel(company:Company(name:"Netflix")),CompanyViewModel(company:Company(name:"Tesla")),CompanyViewModel(company:Company(name:"Samsung")), CompanyViewModel(company:Company(name:"YouTube")),CompanyViewModel(company:Company(name:"Stripe")),CompanyViewModel(company:Company(name:"Uber"))]
+//       companyNameArry = [MovieViewModel(company:Movie(name:"Apple")),MovieViewModel(company:Company(name:"Microsoft")),MovieViewModel(company:Company(name:"Google")),MovieViewModel(company:Company(name:"Amazon")),MovieViewModel(company:Company(name:"Netflix")),MovieViewModel(company:Company(name:"Tesla")),MovieViewModel(company:Company(name:"Samsung")), MovieViewModel(company:Company(name:"YouTube")),MovieViewModel(company:Company(name:"Stripe")),MovieViewModel(company:Company(name:"Uber"))]
+        movieFetchViewModel.fetchMovies { (moviesArray) in
+            self.companyNameArry = moviesArray.map({ return MovieViewModel(company: $0)})
+            self.todoTableView.reloadData()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

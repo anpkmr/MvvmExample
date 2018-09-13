@@ -37,7 +37,7 @@ class LoginViewModel {
     
     func loginRequest(_ completion:@escaping ((_ resposne:Any?,_ error:Error?)->Void)) {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             if self.username == "swiftUser" && self.password == "swiftPassword" {
                 completion("user logged in", nil)
             } else {

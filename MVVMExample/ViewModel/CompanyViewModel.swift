@@ -9,15 +9,34 @@
 import Foundation
 import UIKit
 
-struct CompanyViewModel {
-    let comName:String
-    let accessoryType:UITableViewCellAccessoryType
-    init(company:Company) {
-        self.comName = company.name
-        if ((company.name.lowercased() == "apple") || (company.name.lowercased() == "samsung")) {
+
+class MovieDataFetchViewModel {
+    
+    
+    func fetchMovies(completion:@escaping ([Movie])->()) {
+        ClientService.shardService.fetchMoviesFromiTunes { (movieArr, error) in
+            if error == nil {
+                completion(movieArr as! [Movie])
+            }
+        }
+    }
+    
+    
+    
+}
+
+class MovieViewModel {
+    
+    var movieName:String = ""
+    var accessoryType:UITableViewCellAccessoryType = .none
+    
+    init(company:Movie) {
+        self.movieName = company.movieName
+        if ((company.movieName.lowercased() == "Gotti") || (company.movieName.lowercased() == "samsung")) {
             accessoryType = .detailDisclosureButton
         } else {
             accessoryType = .none
         }
     }
+    
 }
