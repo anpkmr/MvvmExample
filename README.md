@@ -14,4 +14,4 @@ Open MVVMExample.xcworkspace, select desired target, build and run, enjoy! :+1:
 
 **ScreenShots:**
 
-![](MVVMExample/Screenshots/Simulator Screen Shot - iPhone 8 Plus - 2018-09-14 at 17.56.19.png)
+![](MVVMExample/Screenshots/screenshot1.png)
