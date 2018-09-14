@@ -13,5 +13,5 @@ Open MVVMExample.xcworkspace, select desired target, build and run, enjoy! :+1:
 
 
 # **ScreenShots:**
-![](MVVMExample/Screenshots/screenshot2.png)
-![](MVVMExample/Screenshots/screenshot1.png)
+![](MVVMExample/Screenshots/screenShot2.png)
+![](MVVMExample/Screenshots/screenShot1.png)
