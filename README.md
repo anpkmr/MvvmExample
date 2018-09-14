@@ -8,4 +8,5 @@
 5) Fetch top movies from iTunes and show them in tableView.
 
 **Instructions**
+
 Open MVVMExample.xcworkspace, select desired target, build and run, enjoy! :+1:
