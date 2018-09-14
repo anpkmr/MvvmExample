@@ -3,4 +3,5 @@
 2) Can change your validtion accrodingly.
 3) sever request can be handled in viewModel.
 4) Currently just a simple startup demo. Will try to improve.
+5) fetch top movies from iTunes and show them in tableView.
 
