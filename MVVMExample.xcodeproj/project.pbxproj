@@ -38,6 +38,8 @@
 /* Begin PBXFileReference section */
 		109D5A4CD634E7841812D893 /* Pods-MVVMExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMExample/Pods-MVVMExample.debug.xcconfig"; sourceTree = "<group>"; };
 		2D559C2F20588473C2BC1B1C /* Pods-MVVMExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMExample/Pods-MVVMExample.release.xcconfig"; sourceTree = "<group>"; };
+		6E04DDD8214BE0BF00794413 /* Simulator Screen Shot - iPhone 8 Plus - 2018-09-14 at 17.57.30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 8 Plus - 2018-09-14 at 17.57.30.png"; sourceTree = "<group>"; };
+		6E04DDD9214BE0C000794413 /* Simulator Screen Shot - iPhone 8 Plus - 2018-09-14 at 17.56.19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 8 Plus - 2018-09-14 at 17.56.19.png"; sourceTree = "<group>"; };
 		6E59C23C214A2BBF00B88D42 /* MVVMExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E59C23F214A2BBF00B88D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E59C241214A2BBF00B88D42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6E04DDD7214BE05800794413 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				6E04DDD9214BE0C000794413 /* Simulator Screen Shot - iPhone 8 Plus - 2018-09-14 at 17.56.19.png */,
+				6E04DDD8214BE0BF00794413 /* Simulator Screen Shot - iPhone 8 Plus - 2018-09-14 at 17.57.30.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		6E59C233214A2BBF00B88D42 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +138,7 @@
 			children = (
 				6E59C23F214A2BBF00B88D42 /* AppDelegate.swift */,
 				6E59C272214A864400B88D42 /* Constants.swift */,
+				6E04DDD7214BE05800794413 /* Screenshots */,
 				6E59C26D214A849100B88D42 /* Services */,
 				6E59C26C214A840E00B88D42 /* TableViewCells */,
 				6E59C26B214A83FF00B88D42 /* Models */,
