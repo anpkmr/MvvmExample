@@ -13,7 +13,7 @@ class ViewController: UIViewController,UITableViewDataSource {
     
     var movieFetchViewModel = MovieDataFetchViewModel()
     
-    var companyNameArry = [MovieViewModel]()
+    var movieArray = [MovieViewModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class ViewController: UIViewController,UITableViewDataSource {
         //creating an array of CompnayViewModel
 //       companyNameArry = [MovieViewModel(company:Movie(name:"Apple")),MovieViewModel(company:Company(name:"Microsoft")),MovieViewModel(company:Company(name:"Google")),MovieViewModel(company:Company(name:"Amazon")),MovieViewModel(company:Company(name:"Netflix")),MovieViewModel(company:Company(name:"Tesla")),MovieViewModel(company:Company(name:"Samsung")), MovieViewModel(company:Company(name:"YouTube")),MovieViewModel(company:Company(name:"Stripe")),MovieViewModel(company:Company(name:"Uber"))]
         movieFetchViewModel.fetchMovies { (moviesArray) in
-            self.companyNameArry = moviesArray.map({ return MovieViewModel(company: $0)})
+            self.movieArray = moviesArray.map({ return MovieViewModel(movie: $0)})
             self.todoTableView.reloadData()
         }
         
@@ -39,11 +39,11 @@ class ViewController: UIViewController,UITableViewDataSource {
     
     //MARK:- Data_Source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return companyNameArry.count
+        return movieArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CompanyCell
-        cell.companyVM = companyNameArry[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieCell
+        cell.companyVM = movieArray[indexPath.row]
         return cell
         
     }

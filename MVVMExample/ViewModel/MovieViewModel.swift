@@ -30,9 +30,9 @@ class MovieViewModel {
     var movieName:String = ""
     var accessoryType:UITableViewCellAccessoryType = .none
     
-    init(company:Movie) {
-        self.movieName = company.movieName
-        if ((company.movieName.lowercased() == "Gotti") || (company.movieName.lowercased() == "samsung")) {
+    init(movie:Movie) {
+        self.movieName = movie.movieName
+        if ((movie.movieName.lowercased() == "gotti") || (movie.movieName.lowercased() == "samsung")) {
             accessoryType = .detailDisclosureButton
         } else {
             accessoryType = .none

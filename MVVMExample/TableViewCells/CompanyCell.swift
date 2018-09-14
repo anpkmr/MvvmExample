@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CompanyCell: UITableViewCell {
+class MovieCell: UITableViewCell {
     
     var companyVM:MovieViewModel! {
         didSet {
