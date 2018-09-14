@@ -114,8 +114,14 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="9Ko-cb-eOk"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHA-F6-M51">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Top Movies" id="VgK-mA-yjI"/>
+                                </items>
+                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUZ-sd-lkm">
-                                <rect key="frame" x="312" y="20" width="48" height="30"/>
+                                <rect key="frame" x="312" y="20" width="48" height="0.0"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
                                     <action selector="logOutTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uOc-sR-t1C"/>
@@ -125,8 +131,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DcP-Gu-0eD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="22i-K0-bEz"/>
+                            <constraint firstItem="VHA-F6-M51" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2Nw-fK-YAM"/>
+                            <constraint firstItem="VHA-F6-M51" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="96x-N0-HXB"/>
                             <constraint firstItem="nUZ-sd-lkm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DJL-ny-9Ez"/>
-                            <constraint firstItem="DcP-Gu-0eD" firstAttribute="top" secondItem="nUZ-sd-lkm" secondAttribute="bottom" constant="14" id="bCd-rL-een"/>
+                            <constraint firstItem="DcP-Gu-0eD" firstAttribute="top" secondItem="nUZ-sd-lkm" secondAttribute="bottom" constant="44" id="bCd-rL-een"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VHA-F6-M51" secondAttribute="trailing" id="jQy-gF-Q1H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nUZ-sd-lkm" secondAttribute="trailing" constant="15" id="mqb-p1-aIV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DcP-Gu-0eD" secondAttribute="trailing" id="pFn-pp-i4c"/>
                             <constraint firstItem="DcP-Gu-0eD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="u8m-aF-rZJ"/>
