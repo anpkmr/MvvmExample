@@ -21,7 +21,6 @@ class ClientService: NSObject {
     func postRequest(requestUrl:URL,requestParam:[String:Any]?,completion:@escaping (Any?,Error?)->Void) {
        
         Alamofire.request(requestUrl, method:.post, parameters: requestParam, encoding: URLEncoding.default, headers: nil).validate({ request, response, data in
-            print("request==\(String(describing: request))==== response==\(response)=== and finally dat======\(String(describing: data))")
             var errorMessage = ""
             if response.statusCode >= 200 && response.statusCode < 400 {
                 return .success
@@ -62,7 +61,6 @@ class ClientService: NSObject {
     func getRequest(requestUrl:URL,requestParam:[String:Any]?,completion:@escaping (Any?,Error?)->Void) {
         
         Alamofire.request(requestUrl, method:.get, parameters: requestParam, encoding: URLEncoding.default, headers: nil).validate({ request, response, data in
-            print("request==\(String(describing: request))==== response==\(response)=== and finally dat======\(String(describing: data))")
             var errorMessage = ""
             if response.statusCode >= 200 && response.statusCode < 400 {
                 return .success
@@ -106,7 +104,6 @@ class ClientService: NSObject {
             }.downloadProgress { progress in // called on main queue by default
                 print("Download Progress: \(progress.fractionCompleted)")
             }.validate({ request, response, data in
-                print("request==\(String(describing: request))==== response==\(response)=== and finally dat======\(String(describing: data))")
                 var errorMessage = ""
                 if response.statusCode >= 200 && response.statusCode < 400 {
                     return .success
@@ -145,7 +142,7 @@ class ClientService: NSObject {
 
 class CSCustomError:Error {
     class func myError(message:String)->Error{
-        return NSError(domain: Bundle.main.bundleIdentifier!, code: 422, userInfo: [NSLocalizedDescriptionKey: message])
+        return NSError(domain: Bundle.main.bundleIdentifier!, code: 400, userInfo: [NSLocalizedDescriptionKey: message])
     }
     
     
